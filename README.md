@@ -17,6 +17,7 @@ Legenda:
 - :date: - Ler futuramente
 
 ## R for Data Science.
+- [ ] [Preface](/R_for_Data_Science/preface.Rmd)
 
 ### Part I. Explore
 
