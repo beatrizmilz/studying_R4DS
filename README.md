@@ -17,11 +17,11 @@ Legenda:
 - :date: - Ler futuramente
 
 ## R for Data Science.
-- [x] [Preface](/R_for_Data_Science/preface.Rmd)
+- [x] [Preface](/R_for_Data_Science/00-preface.Rmd)
 
 ### Part I. Explore
 
-- [ ]  1. Data Visualization with `ggplot2`
+- [ ]  [1. Data Visualization with `ggplot2`](/R_for_Data_Science/01-data-visualization-with-ggplot2.Rmd)
 
 - [ ]  2. Workflow: Basics
 
