@@ -6,6 +6,8 @@ Livros que estou lendo/quero ler:
 
 - [ ]  :pushpin: [R for Data Science](https://r4ds.had.co.nz/)
 
+- [ ]  :date: [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+
 - [ ]  :date: [R Packages](https://r-pkgs.org/)
 
 Legenda:
