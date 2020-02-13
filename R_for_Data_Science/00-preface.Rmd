@@ -1,0 +1,23 @@
+---
+title: "Preface"
+output: html_document
+---
+
+```{r}
+# install.packages("tidyverse")
+# tidyverse::tidyverse_update()
+library(tidyverse)
+```
+
+```{r}
+#install.packages(c("nycflights13", "gapminder", "Lahman"))
+
+library(nycflights13)
+library(gapminder)
+library(Lahman)
+```
+
+```{r}
+dput(mtcars)
+```
+

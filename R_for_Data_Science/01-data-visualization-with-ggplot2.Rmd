@@ -1,0 +1,139 @@
+---
+title: "Chapter 01 - Data Visualization with ggplot2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+mpg <- ggplot2::mpg
+```
+
+```{r}
+# Exemplo no livro - p. 5 
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+## A Graphing Template - Exercises (p. 6)
+
+```{r}
+#1
+ggplot(data = mpg)
+```
+```{r}
+#2 
+nrow(mpg)
+ncol(mpg)
+# 234 linhas e 11 colunas
+```
+
+```{r}
+# 3 
+?mpg
+# drv
+# f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+```
+
+```{r}
+# 4
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = hwy, y = cyl))
+```
+
+```{r}
+# 5
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = class, y = drv))
+```
+
+
+```{r}
+# Exemplo. pg 8
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+```
+
+```{r}
+# Exemplo pg. 9
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+```
+
+
+```{r}
+# Exemplo pg. 9
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
+```
+
+
+```{r}
+# Exemplo pg. 9
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class))
+```
+
+
+
+```{r}
+# Exemplo pg. 9
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+```
+
+
+## Aesthetic Mappings - Exercises (p. 12)
+
+```{r}
+#1
+ggplot(data = mpg) + 
+  geom_point(
+    mapping = aes(x = displ, y= hwy), color = "blue"
+  )
+```
+
+```{r}
+# 2
+head(mpg)
+# categorical: manufacturer, model, trans, drv, fl, class
+# continuous: displ, year, cyk, cty, hwy
+```
+```{r}
+# 3
+# ggplot(data = mpg) +
+#  geom_point(aes(x = displ, y = year, shape = cty))
+
+#Erro: A continuous variable can not be mapped to shape
+```
+
+```{r}
+# 4
+ ggplot(data = mpg) +
+  geom_point(aes(x = class, y = class, shape = class))
+
+```
+
+```{r}
+# 5
+ ggplot(data = mpg) +
+  geom_point(aes(x = displ, y = hwy, stroke = cty))
+
+```
+
+
+
+```{r}
+# 6
+ ggplot(data = mpg) +
+  geom_point(aes(x = displ, y = hwy, color = displ < 5))
+
+```
