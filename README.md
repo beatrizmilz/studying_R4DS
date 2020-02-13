@@ -3,13 +3,24 @@
 Repositório de exercícios resolvidos enquanto estudo livros sobre R. 
 
 Livros que estou lendo/quero ler:
-- R for Data Science
+
+- :pushpin: R for Data Science
+
+- [R Packages](https://r-pkgs.org/)
+
+Legenda:
+
+- :tada: - Leitura completa
+
+- :pushpin: - Lendo este livro
+
+- :date: - Ler futuramente
 
 ## R for Data Science.
 
 ### Part I. Explore
 
-- 1. Data Visualization with `ggplot2`
+[ ] 1. Data Visualization with `ggplot2`
 
 - 2. Workflow: Basics
 
