@@ -1,0 +1,15 @@
+---
+title: "Preface"
+output: html_document
+---
+
+```{r}
+install.packages("tidyverse")
+
+library(tidyverse)
+```
+
+```{r}
+install.packages(c("nycflights13", "gapminder", "Lahman"))
+```
+
