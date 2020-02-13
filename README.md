@@ -20,7 +20,7 @@ Legenda:
 
 ### Part I. Explore
 
-[ ] 1. Data Visualization with `ggplot2`
+- [ ]  1. Data Visualization with `ggplot2`
 
 - 2. Workflow: Basics
 
