@@ -18,6 +18,8 @@ Legenda:
 
 - :date: - Ler futuramente
 
+- :paperclip: - Leitura em pausa
+
 ## R for Data Science.
 - [x] [Preface](/R_for_Data_Science/00-preface.Rmd)
 

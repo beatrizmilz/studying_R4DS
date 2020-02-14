@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+## Introduction
 ```{r}
 library(tidyverse)
 ```
@@ -16,6 +16,7 @@ library(tidyverse)
 mpg <- ggplot2::mpg
 ```
 
+## Creating a ggplot
 ```{r}
 # Exemplo no livro - p. 5 
 ggplot(data = mpg) +
@@ -54,7 +55,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = class, y = drv))
 ```
 
-
+## Aesthetic Mappings
 ```{r}
 # Exemplo. pg 8
 
@@ -136,4 +137,46 @@ head(mpg)
  ggplot(data = mpg) +
   geom_point(aes(x = displ, y = hwy, color = displ < 5))
 
+```
+
+## Facets
+
+```{r}
+# Ex. pg. 14
+mpg %>% 
+  ggplot() +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ class, nrow = 2)
+```
+
+```{r}
+# Ex. pg. 14
+mpg %>% 
+  ggplot() +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ cyl)
+```
+
+
+## Facets - Exercises (p. 15)
+```{r}
+# 1
+
+mpg %>% 
+  ggplot() +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ cty)
+```
+
+```{r}
+# 2
+
+mpg %>% 
+  ggplot() +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ cyl)
+
+mpg %>% 
+  ggplot() +
+  geom_point(mapping = aes(x = drv, y = cyl)) 
 ```
