@@ -4,9 +4,9 @@ Repositório de exercícios resolvidos enquanto estudo livros sobre R.
 
 Livros que estou lendo/quero ler:
 
-- [ ]  :pushpin: [R for Data Science](https://r4ds.had.co.nz/)
+- [ ]  :paperclip: [R for Data Science](https://r4ds.had.co.nz/)
 
-- [ ]  :date: [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+- [ ]  :pushpin: [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
 
 - [ ]  :date: [R Packages](https://r-pkgs.org/)
 
@@ -20,7 +20,36 @@ Legenda:
 
 - :paperclip: - Leitura em pausa
 
-## R for Data Science.
+## Hands-On Programming with R
+
+### Part I. Project 1: Weighted Dice
+
+- [ ]  1. The Very Basics
+
+- [ ]  2. Packages and Help Pages
+
+### Part II. Project 2: Playing Cards
+
+- [ ]  3. R Objects
+
+- [ ]  4. R Notation
+
+- [ ]  5. Modifying Values
+
+- [ ]  6. Environments
+
+### Part III. Project 3: Slot Machine
+
+- [ ]  7. Programs
+
+- [ ]  8. S3
+
+- [ ]  9. Loops
+
+- [ ]  10. Speed
+
+
+## R for Data Science
 - [x] [Preface](/R_for_Data_Science/00-preface.Rmd)
 
 ### Part I. Explore
