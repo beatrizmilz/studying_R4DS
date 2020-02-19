@@ -24,9 +24,9 @@ Legenda:
 
 ### Part I. Project 1: Weighted Dice
 
-- [ ]  1. The Very Basics
+- [x]  1. [The Very Basics](Hands-on_Programming_with_R/01-partI.Rmd)
 
-- [ ]  2. Packages and Help Pages
+- [x]  2. [Packages and Help Pages](Hands-on_Programming_with_R/01-partI.Rmd)
 
 ### Part II. Project 2: Playing Cards
 

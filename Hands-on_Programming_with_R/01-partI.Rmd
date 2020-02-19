@@ -1,0 +1,74 @@
+---
+title: "Part I"
+output: html_document
+---
+
+## Chapter 1 - The Very Basics
+
+```{r}
+# Exercicio pg. 6
+x <- sample(x = 1:100)
+y <- (((x + 2) * 3) - 6) / 3
+
+x == y
+```
+
+```{r}
+# p. 8
+# Criar um dado com 6 lados
+die <- 1:6
+die
+
+```
+```{r}
+# Criar uma função para jogar os dados n vezes
+
+
+roll2 <- function(bones = 1:6, n_dados = 2) {
+  dice <- sample(bones, size = n_dados, replace = TRUE)
+  sum(dice)
+}
+
+roll2()
+```
+
+
+## Chapter 2 - Packages and Help Pages
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+# Ex. pg 27
+
+x3 <- c(0, 1, 1, 2, 2, 2, 3, 3, 4)
+
+qplot(x3, binwidth = 1)
+```
+
+```{r}
+# replicar mil vezes o ato de jogar os dois dados, e fazer um histograma
+rolls <- replicate(1000, roll2())
+
+qplot(rolls, binwidth = 1)
+```
+
+
+```{r}
+
+# Ex. pg 32
+
+roll3 <- function() {
+  die <- 1:6
+  dice <- sample(die, size = 2, replace = TRUE, 
+                 prob = c(1/8, 1/8, 1/8, 1/8, 1/8, 3/8))
+  sum(dice)
+}
+
+rolls3 <- replicate(1000, roll3())
+
+qplot(rolls3, binwidth = 1)
+
+
+```
