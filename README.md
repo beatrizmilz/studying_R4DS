@@ -8,7 +8,7 @@ Livros que estou lendo/quero ler:
 
 - [ ]  :paperclip: [R for Data Science](#r-for-data-science) - [Link](https://r4ds.had.co.nz/)
 
-- [ ]  :date: [R Packages](https://r-pkgs.org/)
+- [ ]  :date: R Packages - [Link](https://r-pkgs.org/)
 
 Legenda:
 
