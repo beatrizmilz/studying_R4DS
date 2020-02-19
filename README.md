@@ -4,9 +4,9 @@ Repositório de exercícios resolvidos enquanto estudo livros sobre R.
 
 Livros que estou lendo/quero ler:
 
-- [ ]  :paperclip: [R for Data Science](https://r4ds.had.co.nz/)
+- [ ]  :pushpin: [Hands-On Programming with R](#hands-on-programming-with-r) - [Link](https://rstudio-education.github.io/hopr/)
 
-- [ ]  :pushpin: [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+- [ ]  :paperclip: [R for Data Science](#r-for-data-science) - [Link](https://r4ds.had.co.nz/)
 
 - [ ]  :date: [R Packages](https://r-pkgs.org/)
 
