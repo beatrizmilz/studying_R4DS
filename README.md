@@ -1,5 +1,4 @@
-# studying_R4DS
-
+# Estudando R
 Repositório de exercícios resolvidos enquanto estudo livros sobre R. 
 
 Livros que estou lendo/quero ler:
