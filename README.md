@@ -30,13 +30,13 @@ Legenda:
 
 ### Part II. Project 2: Playing Cards
 
-- [ ]  3. R Objects
+- [ ]  3. [R Objects](Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [ ]  4. R Notation
+- [ ]  4. [R Notation](Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [ ]  5. Modifying Values
+- [ ]  5. [Modifying Values](Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [ ]  6. Environments
+- [ ]  6. [Environments](Hands-on_Programming_with_R/02-partII.Rmd)
 
 ### Part III. Project 3: Slot Machine
 

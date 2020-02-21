@@ -1,0 +1,93 @@
+---
+title: "Part II"
+output: html_document
+---
+
+## Chapter 3 - R Objects
+
+```{r}
+# exercise, pg 41
+
+typeof(1) #double
+
+typeof("1")#character
+
+typeof("one") #character
+```
+
+```{r}
+# exercise, pg 43
+
+hand <- c("ace", "king", "queen", "jack", "ten")
+
+hand
+
+typeof(hand)
+```
+
+
+```{r}
+# exercise, pg 47
+
+
+hand2 <- matrix(
+  data = c(
+    "ace",
+    "king",
+    "queen",
+    "jack",
+    "ten",
+    "spades",
+    "spades",
+    "spades",
+    "spades",
+    "spades"
+  ),
+  ncol = 2
+)
+
+hand2
+
+```
+
+```{r}
+# Exercise, pg 51
+
+card <- c("ace", "heart", 1)
+
+card
+```
+
+### Loading data - p. 57
+
+```{r eval=FALSE, include=TRUE}
+
+url <- "https://gist.github.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv"
+
+curl::curl_download(url, destfile = "deck.csv")
+```
+
+
+```{r}
+library(readr)
+
+deck <- read_csv("deck.csv")
+
+```
+
+```{r}
+head(deck)
+
+tail(deck)
+```
+
+
+```{r}
+# write csv
+
+write_csv(deck, path = "cards.csv")
+```
+
+
+
+
