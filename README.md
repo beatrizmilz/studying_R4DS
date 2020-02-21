@@ -23,7 +23,7 @@ Legenda:
 
 ### Part I. Project 1: Weighted Dice
 
-- [x]  1. [The Very Basics](Hands-on_Programming_with_R/01-partI.Rmd)
+- [x]  1. [The Very Basics](Hands-on_Programming_with_R/01-partI.Rmd) - [html](Hands-on_Programming_with_R/01-partI.html)
 
 - [x]  2. [Packages and Help Pages](Hands-on_Programming_with_R/01-partI.Rmd)
 
