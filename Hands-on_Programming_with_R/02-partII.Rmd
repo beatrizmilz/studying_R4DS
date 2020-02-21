@@ -3,6 +3,10 @@ title: "Part II"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+```
+
 ## Chapter 3 - R Objects
 
 ```{r}
@@ -10,7 +14,7 @@ output: html_document
 
 typeof(1) #double
 
-typeof("1")#character
+typeof("1") #character
 
 typeof("one") #character
 ```
@@ -61,7 +65,6 @@ card
 ### Loading data - p. 57
 
 ```{r eval=FALSE, include=TRUE}
-
 url <- "https://gist.github.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv"
 
 curl::curl_download(url, destfile = "deck.csv")
@@ -72,7 +75,9 @@ curl::curl_download(url, destfile = "deck.csv")
 library(readr)
 
 deck <- read_csv("deck.csv")
-
+```
+```{r}
+DT::datatable(deck)
 ```
 
 ```{r}
