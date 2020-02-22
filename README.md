@@ -23,19 +23,19 @@ Legenda:
 
 ### Part I. Project 1: Weighted Dice
 
-- [x]  1. [The Very Basics](Hands-on_Programming_with_R/01-partI.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/01-partI.html)
+- [x]  1. [The Very Basics](Hands-on_Programming_with_R/01-partI.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/01-partI.html) - [RMarkdown](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/01-partI.Rmd)
 
-- [x]  2. [Packages and Help Pages](Hands-on_Programming_with_R/01-partI.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/01-partI.html)
+- [x]  2. [Packages and Help Pages](Hands-on_Programming_with_R/01-partI.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/01-partI.html) - [RMarkdown](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/01-partI.Rmd)
 
 ### Part II. Project 2: Playing Cards
 
-- [x]  3. [R Objects](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html)
+- [x]  3. [R Objects](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html) - [RMarkdown](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [x]  4. [R Notation](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html)
+- [x]  4. [R Notation](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html) - [RMarkdown](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [ ]  5. [Modifying Values](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html)
+- [ ]  5. [Modifying Values](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html) - - [RMarkdown](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [ ]  6. [Environments](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html)
+- [ ]  6. [Environments](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.html) - [RMarkdown](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
 ### Part III. Project 3: Slot Machine
 
