@@ -94,5 +94,32 @@ write_csv(deck, path = "cards.csv")
 ```
 
 
+## Chapter 4 - R Notation
+
+```{r}
+# ex. pg 71
+# make a function that returns the first row of a data frame
+deal <- function(cards){
+  cards[1, ]
+}
+
+deal(deck)
+```
 
 
+```{r}
+# ex. pg 73
+shuffle <- function(cards){
+  ordem_aleatoria <- sample(x = 1:52, size = 52)
+  cards[ordem_aleatoria, ]
+}
+
+
+deck2 <- shuffle(deck)
+```
+
+```{r}
+DT::datatable(deck2)
+```
+
+## Chapter 5 - Modifying Values

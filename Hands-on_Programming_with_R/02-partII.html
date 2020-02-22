@@ -2883,8 +2883,8 @@ deck &lt;- read_csv(&quot;deck.csv&quot;)</code></pre>
 ##   value = col_double()
 ## )</code></pre>
 <pre class="r"><code>DT::datatable(deck)</code></pre>
-<div id="htmlwidget-61180d9229b79a1c169f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-61180d9229b79a1c169f">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52"],["king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace","king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace","king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace","king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace"],["spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts"],[13,12,11,10,9,8,7,6,5,4,3,2,1,13,12,11,10,9,8,7,6,5,4,3,2,1,13,12,11,10,9,8,7,6,5,4,3,2,1,13,12,11,10,9,8,7,6,5,4,3,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>face<\/th>\n      <th>suit<\/th>\n      <th>value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fd8551fc235fdf2a4638" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fd8551fc235fdf2a4638">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52"],["king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace","king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace","king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace","king","queen","jack","ten","nine","eight","seven","six","five","four","three","two","ace"],["spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","spades","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","clubs","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","diamonds","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts","hearts"],[13,12,11,10,9,8,7,6,5,4,3,2,1,13,12,11,10,9,8,7,6,5,4,3,2,1,13,12,11,10,9,8,7,6,5,4,3,2,1,13,12,11,10,9,8,7,6,5,4,3,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>face<\/th>\n      <th>suit<\/th>\n      <th>value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <pre class="r"><code>head(deck)</code></pre>
 <pre><code>## # A tibble: 6 x 3
 ##   face  suit   value
@@ -2909,6 +2909,34 @@ deck &lt;- read_csv(&quot;deck.csv&quot;)</code></pre>
 
 write_csv(deck, path = &quot;cards.csv&quot;)</code></pre>
 </div>
+</div>
+<div id="chapter-4---r-notation" class="section level2">
+<h2>Chapter 4 - R Notation</h2>
+<pre class="r"><code># ex. pg 71
+# make a function that returns the first row of a data frame
+deal &lt;- function(cards){
+  cards[1, ]
+}
+
+deal(deck)</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   face  suit   value
+##   &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;
+## 1 king  spades    13</code></pre>
+<pre class="r"><code># ex. pg 73
+shuffle &lt;- function(cards){
+  ordem_aleatoria &lt;- sample(x = 1:52, size = 52)
+  cards[ordem_aleatoria, ]
+}
+
+
+deck2 &lt;- shuffle(deck)</code></pre>
+<pre class="r"><code>DT::datatable(deck2)</code></pre>
+<div id="htmlwidget-0876dd468f3fcfd13453" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0876dd468f3fcfd13453">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52"],["eight","nine","four","eight","four","ten","seven","five","ten","seven","jack","jack","two","seven","eight","king","eight","queen","six","two","nine","jack","queen","four","ace","ace","two","three","queen","ten","king","five","two","ten","king","nine","jack","nine","six","three","queen","four","three","seven","king","five","six","three","ace","five","six","ace"],["spades","clubs","diamonds","diamonds","hearts","hearts","spades","spades","diamonds","hearts","clubs","hearts","hearts","clubs","hearts","spades","clubs","spades","hearts","clubs","hearts","diamonds","clubs","spades","clubs","spades","spades","clubs","hearts","clubs","hearts","hearts","diamonds","spades","clubs","spades","spades","diamonds","spades","spades","diamonds","clubs","hearts","diamonds","diamonds","clubs","clubs","diamonds","diamonds","diamonds","diamonds","hearts"],[8,9,4,8,4,10,7,5,10,7,11,11,2,7,8,13,8,12,6,2,9,11,12,4,1,1,2,3,12,10,13,5,2,10,13,9,11,9,6,3,12,4,3,7,13,5,6,3,1,5,6,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>face<\/th>\n      <th>suit<\/th>\n      <th>value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="chapter-5---modifying-values" class="section level2">
+<h2>Chapter 5 - Modifying Values</h2>
 </div>
 
 

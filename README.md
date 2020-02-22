@@ -29,9 +29,9 @@ Legenda:
 
 ### Part II. Project 2: Playing Cards
 
-- [ ]  3. [R Objects](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
+- [x]  3. [R Objects](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
-- [ ]  4. [R Notation](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
+- [x]  4. [R Notation](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
 - [ ]  5. [Modifying Values](Hands-on_Programming_with_R/02-partII.Rmd) - [html](https://beatrizmilz.github.io/studying_R4DS/Hands-on_Programming_with_R/02-partII.Rmd)
 
