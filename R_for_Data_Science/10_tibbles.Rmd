@@ -1,0 +1,187 @@
+---
+title: "10 - Tibbles"
+output: html_document
+---
+
+> It’s difficult to change base R without breaking existing code, so most innovation occurs in packages.
+
+Para saber mais sobre o pacote:
+
+```{r}
+vignette("tibble")
+```
+
+```{r}
+library(tidyverse)
+```
+
+>  Tibbles are one of the unifying features of the tidyverse. 
+
+```{r}
+as_tibble(iris)
+```
+
+> "It’s possible for a tibble to have column names that are not valid R variable names, aka non-syntactic names."
+
+Ex:
+
+```{r}
+tb <- tibble(
+  `:)` = "smile", 
+  ` ` = "space",
+  `2000` = "number"
+)
+
+tb
+```
+
+- tribble: transposed tibble.
+ex:
+
+```{r}
+tribble(
+  ~x, ~y, ~z,
+  #--|--|----
+  "a", 2, 3.6,
+  "b", 1, 8.5
+)
+
+```
+
+> There are two main differences in the usage of a tibble vs. a classic data.frame: printing and subsetting.
+Tibbles are designed so that you don’t accidentally overwhelm your console when you print large data frames
+
+```{r}
+nycflights13::flights %>% 
+  print(n = 10, width = Inf)
+```
+
+
+
+> Compared to a data.frame, tibbles are more strict: they never do partial matching, and they will generate a warning if the column you are trying to access does not exist.
+
+
+```{r}
+df <- tibble(
+  x = runif(5),
+  y = rnorm(5)
+)
+
+df %>%  .$x
+
+df %>%  .[["x"]]
+```
+
+
+> Some older functions don’t work with tibbles. If you encounter one of these functions, use as.data.frame() to turn a tibble back to a data.frame:
+
+> With tibbles, [ always returns another tibble.
+
+## 10.5 Exercícios
+
+1. 
+
+```{r}
+class(mtcars)
+```
+
+
+```{r}
+class(nycflights13::flights)
+```
+
+
+
+2. 
+
+```{r}
+df <- data.frame(abc = 1, xyz = "a") # transforma o conteúdo de xyz em factor
+
+df
+
+
+df$x # não dá erro, mesmo a coluna x não existindo
+df[, "xyz"]  # retorna o conteúdo como um vetor
+df[, c("abc", "xyz")] # retorna um df
+```
+```{r}
+df_tibble <- tibble(abc = 1, xyz = "a")
+df_tibble
+
+df_tibble$x # deixa claro q a coluna não existe
+
+df_tibble[, "xyz"] # retorna o conteúdo como uma tibble
+
+df_tibble[, c("abc", "xyz")] # retorna uma tibble
+```
+
+3.
+
+```{r}
+var <- "mpg"
+
+mtcars_tibble <- as_tibble(mtcars)
+
+
+mtcars_tibble[, var]
+```
+
+4. 
+```{r}
+annoying <- tibble(
+  `1` = 1:10,
+  `2` = `1` * 2 + rnorm(length(`1`))
+)
+```
+
+
+```{r}
+# 4.1
+
+annoying$`1`
+```
+
+```{r}
+# 4.2
+
+annoying %>% 
+  ggplot() +
+  geom_point(aes(x = `1`, y = `2`))
+```
+
+
+```{r}
+# 4.3
+
+annoying$`3` <- annoying$`2` / annoying$`1`
+
+annoying
+```
+
+
+```{r}
+# 4.4
+
+annoying <- annoying %>%  rename(c(one = `1`, two = `2`, three = `3`)) 
+
+
+annoying
+```
+
+
+5. 
+
+```{r}
+
+x <- sample(1:10)
+
+tibble::enframe(x) # enframe recebe um vetor (1 dimensão), e cria um tibble, sendo criado uma coluna chamada name com a ordem de cada conteúdo do vetor, e uma coluna chamada value, contendo os conteúdos do vetor. 
+```
+
+
+6. Não entendi bem a pergunta
+
+```{r}
+nycflights13::flights
+```
+
