@@ -50,21 +50,21 @@ Legenda:
 
 ## R for Data Science
 
-- [x]  1. Introduction
+- [x]  1. Introduction 
 - [x]  2. Explore: introduction
 - [ ]  3. Data visualisation
 - [x]  4. Workflow: basics
-- [ ]  5. Data transformation
+- [ ]  5. Data transformation - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 1
 - [ ]  6. Workflow: scripts
 - [ ]  7. Exploratory Data Analysis
 - [ ]  8. Workflow: Projects
 - [x]  9. Wrangle: Introduction
-- [ ]  10. Tibbles
-- [ ]  11. Data Import
-- [ ]  12. Tidy Data
+- [ ]  10. Tibbles - Ler para a disciplina  [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 1
+- [ ]  11. Data Import - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 1
+- [ ]  12. Tidy Data - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2
 - [ ]  13. Relational Data with dplyr
 - [ ]  14. Strings
-- [ ]  15. Factors
+- [ ]  15. Factors - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2
 - [ ]  16. Date and times
 - [ ]  17. Program: introduction
 - [ ]  18. Pipes
@@ -76,7 +76,7 @@ Legenda:
 - [ ]  24. Model building
 - [ ]  25. Many models
 - [ ]  26. Communicate: introduction
-- [ ]  27. R Markdown
+- [ ]  27. R Markdown - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2
 - [ ]  28. Graphics for communication
 - [ ]  29. R Markdown formats
 - [ ]  30. R Markdown workflow
