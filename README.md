@@ -21,30 +21,20 @@ Legenda:
 
 ## Hands-On Programming with R
 
-### Part I. Project 1: Weighted Dice
-
+**Part I. Project 1: Weighted Dice**
 - [x]  1. The Very Basics
-
 - [x]  2. Packages and Help Pages
 
-### Part II. Project 2: Playing Cards
-
+**Part II. Project 2: Playing Cards**
 - [x]  3. R Objects
-
 - [x]  4. R Notation
-
 - [ ]  5. Modifying Values
-
 - [ ]  6. Environments
 
-### Part III. Project 3: Slot Machine
-
+**Part III. Project 3: Slot Machine**
 - [ ]  7. Programs
-
 - [ ]  8. S3
-
 - [ ]  9. Loops
-
 - [ ]  10. Speed
 
 
