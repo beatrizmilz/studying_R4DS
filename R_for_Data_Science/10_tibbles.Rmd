@@ -79,7 +79,7 @@ df %>%  .[["x"]]
 
 ## 10.5 Exercícios
 
-1. 
+1.How can you tell if an object is a tibble? (Hint: try printing mtcars, which is a regular data frame). 
 
 ```{r}
 class(mtcars)
@@ -92,7 +92,7 @@ class(nycflights13::flights)
 
 
 
-2. 
+2. Compare and contrast the following operations on a data.frame and equivalent tibble. What is different? Why might the default data frame behaviours cause you frustration?
 
 ```{r}
 df <- data.frame(abc = 1, xyz = "a") # transforma o conteúdo de xyz em factor
@@ -115,7 +115,7 @@ df_tibble[, "xyz"] # retorna o conteúdo como uma tibble
 df_tibble[, c("abc", "xyz")] # retorna uma tibble
 ```
 
-3.
+3.If you have the name of a variable stored in an object, e.g. var <- "mpg", how can you extract the reference variable from a tibble?
 
 ```{r}
 var <- "mpg"
@@ -126,7 +126,11 @@ mtcars_tibble <- as_tibble(mtcars)
 mtcars_tibble[, var]
 ```
 
-4. 
+4. Practice referring to non-syntactic names in the following data frame by:
+
+
+
+
 ```{r}
 annoying <- tibble(
   `1` = 1:10,
@@ -134,13 +138,14 @@ annoying <- tibble(
 )
 ```
 
-
+4.1 Extracting the variable called 1.
 ```{r}
 # 4.1
 
 annoying$`1`
 ```
 
+4.2 Plotting a scatterplot of 1 vs 2.
 ```{r}
 # 4.2
 
@@ -149,7 +154,7 @@ annoying %>%
   geom_point(aes(x = `1`, y = `2`))
 ```
 
-
+4.3 Creating a new column called 3 which is 2 divided by 1.
 ```{r}
 # 4.3
 
@@ -158,7 +163,7 @@ annoying$`3` <- annoying$`2` / annoying$`1`
 annoying
 ```
 
-
+4.4 Renaming the columns to one, two and three.
 ```{r}
 # 4.4
 
@@ -169,7 +174,7 @@ annoying
 ```
 
 
-5. 
+5. What does tibble::enframe() do? When might you use it? 
 
 ```{r}
 
@@ -179,9 +184,10 @@ tibble::enframe(x) # enframe recebe um vetor (1 dimensão), e cria um tibble, se
 ```
 
 
-6. Não entendi bem a pergunta
+6. What option controls how many additional column names are printed at the footer of a tibble?
 
 ```{r}
-nycflights13::flights
+nycflights13::flights %>% 
+  print(n_extra  = 5) # não parece ter diferença..
 ```
 
