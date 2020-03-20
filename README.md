@@ -1,5 +1,5 @@
 # Estudando R
-Repositório de exercícios resolvidos enquanto estudo livros sobre R. 
+Repositório de exercícios resolvidos enquanto estudo livros sobre R, estatística, e ensino. 
 
 Livros que estou lendo/quero ler:
 
@@ -8,6 +8,10 @@ Livros que estou lendo/quero ler:
 - [ ]  :pushpin: [R for Data Science](#r-for-data-science) - [Link](https://r4ds.had.co.nz/)
 
 - [ ]  :date: R Packages - [Link](https://r-pkgs.org/)
+
+
+- [ ] :date: Teach together - How to create and deliver lessons that work
+and build a teaching community around them - (Link) [https://teachtogether.tech/]
 
 Legenda:
 
@@ -54,7 +58,7 @@ Legenda:
 - [ ]  12. Tidy Data - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2
 - [ ]  13. Relational Data with dplyr
 - [ ]  14. Strings
-- [ ]  15. Factors - Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2
+- [x]  15. Factors 
 - [ ]  16. Date and times
 - [ ]  **17. Program: introduction**
 - [ ]  18. Pipes

@@ -1,0 +1,337 @@
+---
+title: "15 Factors"
+output: html_document
+---
+
+## Introduction 
+
+- Usado para variáveis categóricas
+
+## Prerequisites
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(forcats)
+```
+
+## Creating factors
+
+```{r}
+
+x1 <- c("Dec", "Apr", "Jan", "Mar")
+
+x2 <- c("Dec", "Apr", "Jam", "Mar")
+
+
+month_levels <- c(
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+)
+```
+
+```{r}
+y1 <- factor(x1, levels = month_levels)
+
+y1
+
+y2 <- factor(x2, levels = month_levels)
+
+y2
+```
+
+- Qualquer valor que não esteja nos levels, será SILENCIOSAMENTE transformado em NA. Silenciosamente = o R não vai avisar! Cuidado com erros de digitação.
+
+- Use a função `parse_factor()` para ver os erros/transformações em NA.
+```{r}
+y2 <- parse_factor(x2, levels = month_levels)
+
+```
+
+- Se não especificar os levels, os mesmos serão criados a partir dos dados, em ordem alfabética:
+```{r}
+factor(x1)
+```
+
+- Para criar factors com levels na ordem que aparecem, pode usar:
+
+```{r}
+f1 <- factor(x1, levels = unique(x1))
+f1
+
+
+f2 <- x1 %>% factor() %>% fct_inorder()
+f2
+
+```
+
+- Para ver os níveis, usar `levels()`
+
+```{r}
+levels(f2)
+```
+
+## General Social Survey
+
+
+```{r}
+gss_cat <- forcats::gss_cat
+```
+
+```{r}
+gss_cat %>% count(race)
+```
+
+```{r}
+gss_cat %>%  ggplot(aes(race)) +
+  geom_bar()
+```
+- Por padrão, o ggplot2 descarta levels que não tem valores!
+```{r}
+gss_cat %>%  ggplot(aes(race)) +
+  geom_bar() +
+  scale_x_discrete(drop = FALSE)
+```
+
+- As operações mais comuns trabalhando com factors são: alterar a ordem dos levels, ou modificar o conteúdo dos levels.
+
+### Exercícios
+
+1) Explore the distribution of rincome (reported income). What makes the default bar chart hard to understand? How could you improve the plot?
+```{r}
+gss_cat %>% ggplot(aes(rincome)) +
+  geom_bar()
+```
+É difícil de entender pois tem muitos levels, e eles aparecem um em cima do outro!
+
+2) What is the most common relig in this survey?
+```{r}
+gss_cat %>% count(relig) %>% arrange(desc(n)) %>% dplyr::slice(1) 
+```
+
+What’s the most common partyid?
+
+```{r}
+gss_cat %>% count(partyid) %>% arrange(desc(n)) %>% dplyr::slice(1) 
+```
+
+3) Which relig does denom (denomination) apply to? How can you find out with a table? How can you find out with a visualisation?
+
+
+```{r}
+gss_cat %>% filter(
+  !denom %in% c(
+    "No denomination",
+    "Not applicable",
+    "No denomination",
+    "No answer",
+    "Don't know"
+  )
+) %>%
+  filter(relig != "No answer") %>%
+  group_by(relig) %>%
+  count()
+```
+
+
+```{r}
+gss_cat %>%
+  ggplot() +
+  geom_bar(aes(x = relig, fill = denom)) +
+  coord_flip()
+```
+
+
+## Modifying Factor Order
+
+
+```{r}
+relig_summary <- gss_cat %>%
+  group_by(relig) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    tvhours = mean(tvhours, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(relig_summary, aes(tvhours, relig)) + geom_point()
+```
+
+```{r}
+ggplot(relig_summary, aes(tvhours, fct_reorder(relig, tvhours))) +
+  geom_point()
+```
+
+```{r}
+relig_summary %>%
+  mutate(relig = fct_reorder(relig, tvhours)) %>%
+  ggplot(aes(tvhours, relig)) +
+    geom_point()
+```
+
+```{r}
+rincome_summary <- gss_cat %>%
+  group_by(rincome) %>%
+  summarise(
+    age = mean(age, na.rm = TRUE),
+    tvhours = mean(tvhours, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(rincome_summary, aes(age, fct_reorder(rincome, age))) + geom_point()
+```
+
+```{r}
+ggplot(rincome_summary, aes(age, fct_relevel(rincome, "Not applicable"))) +
+  geom_point()
+```
+```{r}
+by_age <- gss_cat %>%
+  filter(!is.na(age)) %>%
+  count(age, marital) %>%
+  group_by(age) %>%
+  mutate(prop = n / sum(n))
+
+ggplot(by_age, aes(age, prop, colour = marital)) +
+  geom_line(na.rm = TRUE)
+
+ggplot(by_age, aes(age, prop, colour = fct_reorder2(marital, age, prop))) +
+  geom_line() +
+  labs(colour = "marital")
+```
+
+```{r}
+gss_cat %>%
+  mutate(marital = marital %>% fct_infreq() %>% fct_rev()) %>%
+  ggplot(aes(marital)) +
+    geom_bar()
+
+```
+
+### Exercises
+
+1) There are some suspiciously high numbers in tvhours. Is the mean a good summary?
+
+Não, pois a média é mais influenciada por outliers. A mediana seria melhor neste caso. 
+
+
+2) For each factor in gss_cat identify whether the order of the levels is arbitrary or principled.
+
+Apenas a variável rincome tem levels ordenados. 
+
+```{r}
+gss_cat %>% select_if(is.factor) %>% sapply(levels)
+```
+
+
+3) Why did moving “Not applicable” to the front of the levels move it to the bottom of the plot?
+
+Porque a ordem estava de "baixo para cima", ou seja, do primeiro level até o último.
+
+## Modifying Factor Levels
+
+
+
+```{r}
+gss_cat %>% count(partyid)
+```
+
+
+```{r}
+gss_cat %>%
+  mutate(partyid = fct_recode(partyid,
+    "Republican, strong"    = "Strong republican",
+    "Republican, weak"      = "Not str republican",
+    "Independent, near rep" = "Ind,near rep",
+    "Independent, near dem" = "Ind,near dem",
+    "Democrat, weak"        = "Not str democrat",
+    "Democrat, strong"      = "Strong democrat"
+  )) %>%
+  count(partyid)
+
+```
+
+```{r}
+gss_cat %>%
+  mutate(partyid = fct_recode(partyid,
+    "Republican, strong"    = "Strong republican",
+    "Republican, weak"      = "Not str republican",
+    "Independent, near rep" = "Ind,near rep",
+    "Independent, near dem" = "Ind,near dem",
+    "Democrat, weak"        = "Not str democrat",
+    "Democrat, strong"      = "Strong democrat",
+    "Other"                 = "No answer",
+    "Other"                 = "Don't know",
+    "Other"                 = "Other party"
+  )) %>%
+  count(partyid)
+
+```
+
+```{r}
+gss_cat %>%
+  mutate(partyid = fct_collapse(partyid,
+    other = c("No answer", "Don't know", "Other party"),
+    rep = c("Strong republican", "Not str republican"),
+    ind = c("Ind,near rep", "Independent", "Ind,near dem"),
+    dem = c("Not str democrat", "Strong democrat")
+  )) %>%
+  count(partyid)
+```
+
+```{r}
+gss_cat %>%
+  mutate(relig = fct_lump(relig)) %>%
+  count(relig)
+
+```
+
+```{r}
+gss_cat %>%
+  mutate(relig = fct_lump(relig, n = 10)) %>%
+  count(relig, sort = TRUE) %>%
+  print(n = Inf)
+
+```
+
+### Exercises
+
+
+1) How have the proportions of people identifying as Democrat, Republican, and Independent changed over time?
+
+
+```{r}
+gss_cat %>%
+  mutate(partyid_small = fct_collapse(
+    partyid,
+    Democrat = c("Not str democrat", "Strong democrat"),
+    Republican = c("Strong republican", "Not str republican"),
+    Independent = c("Ind,near rep", "Independent", "Ind,near dem")
+  )) %>%
+  filter(partyid_small %in% c("Democrat", "Republican", "Independent")) %>% 
+  count(year, partyid_small) %>% 
+ ggplot()+
+  geom_col(aes(x = year, y= n))+ 
+  facet_wrap(~ partyid_small)
+```
+
+2) How could you collapse rincome into a small set of categories?
+
+```{r}
+gss_cat %>% count(rincome)
+```
+
+
+```{r}
+gss_cat %>% 
+  mutate(rincome_small = 
+           forcats::fct_collapse(rincome,
+"$1000 to 4999" = c("$1000 to 2999",
+                    "$3000 to 3999",
+                    "$4000 to 4999"),
+
+"$5000 to 9999" = c("$5000 to 5999", "$6000 to 6999", "$7000 to 7999", "$8000 to 9999"
+  
+))) %>% 
+  count(rincome_small)
+```
+
