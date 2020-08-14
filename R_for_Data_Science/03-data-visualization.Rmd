@@ -430,7 +430,7 @@ ggplot(data = diamonds) +
   )
 ```
 
-### Exercícios
+### Exercícios **fazer**
 
 1) What is the default geom associated with stat_summary()? How could you rewrite the previous plot to use that geom function instead of the stat function?
 

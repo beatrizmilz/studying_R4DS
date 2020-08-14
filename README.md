@@ -44,37 +44,37 @@ Legenda:
 
 ## R for Data Science
 
-|  Capítulo |  Leitura |  Exercícios | Observação |
-|--:|--:|--:|--:|
-|  1. Introduction |  [x] |  Não tem |  |
-|  **2. Explore: introduction** |  [x] |  Não tem |  |
-| 3. Data visualisation |  [ ] |  [ ] | Ler para o grupo de estudos! |
-| 4. Workflow: basics   |  [x] |  Não tem |  |
-| 5. Data transformation |  [ ] |  [ ] |Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 1; Ler para o grupo de estudos!  |
-| 6. Workflow: scripts |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 3 |
-| 7. Exploratory Data Analysis |  [ ] |  [ ] |  |
-| 8. Workflow: Projects |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 3 |
-| **9. Wrangle: Introduction** |  [x] |  Não tem |  |
-| 10. Tibbles  |  [x] |  [x] |  |
-| 11. Data Import |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 1 |
-| 12. Tidy Data |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2 |
-| 13. Relational Data with dplyr |  [ ] |  [ ] |  |
-| 14. Strings |  [ ] |  [ ] |  |
-| 15. Factors  |  [x] |  [x] |  |
-| 16. Date and times |  [ ] |  [ ] |  |
-| **17. Program: introduction** |  [ ] |   Não tem | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 3 |
-| 18. Pipes |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 3 |
-| 19. Functions |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 3; APRESENTAR ESTE CAPÍTULO NO GRUPO DE ESTUDOS |
-| 20. Vectors |  [ ] |  [ ] |  |
-| 21. Iteration |  [ ] |  [ ] |  |
-| **22. Model: introduction** |  [ ] |   Não tem|  |
-| 23. Model basics |  [ ] |  [ ] |  |
-| 24. Model building |  [ ] |  [ ] |  |
-| 25. Many models |  [ ] |  [ ] |  |
-| **26. Communicate: introduction** |  [ ] |   Não tem |  |
-| 27. R Markdown |  [ ] |  [ ] | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/), aula 2 |
-| 28. Graphics for communication |  [ ] |  [ ] |  |
-| 29. R Markdown formats |  [ ] |  [ ] |  |
-| 30. R Markdown workflow |  [ ] |  [ ] |  |
+|  Capítulo |  Leitura |  Exercícios | Ler para a disciplina [FLS6397](https://github.com/beatrizmilz/2020-FLS6397/) | Ler para o grupo de estudos |
+|--:|--:|--:|--:|--:|
+|  1. Introduction |  [x] |  Não tem |  |  |
+|  **2. Explore: introduction** |  [x] |  Não tem |  |  |
+| 3. Data visualisation |  [ ] |  [ ] |  | x |
+| 4. Workflow: basics   |  [x] |  Não tem |  | x |
+| 5. Data transformation |  [ ] |  [ ] | aula 1  |  x |
+| 6. Workflow: scripts |  [ ] |  [ ] |  aula 3|  x |
+| 7. Exploratory Data Analysis |  [ ] |  [ ] |   ||  x |
+| 8. Workflow: Projects |  [ ] |  [ ] |  aula 3|  x |
+| **9. Wrangle: Introduction** |  [x] |  Não tem |   |  x |
+| 10. Tibbles  |  [x] |  [x] |  |  |
+| 11. Data Import |  [ ] |  [ ] |  aula 1 |  |
+| 12. Tidy Data |  [ ] |  [ ] |  aula 2 |  |
+| 13. Relational Data with dplyr |  [ ] |  [ ] |  |  |
+| 14. Strings |  [ ] |  [ ] |  |  |
+| 15. Factors  |  [x] |  [x] |  |  |
+| 16. Date and times |  [ ] |  [ ] |  |  |
+| **17. Program: introduction** |  [ ] |   Não tem |  aula 3 |  |
+| 18. Pipes |  [ ] |  [ ] |  aula 3 |  |
+| 19. Functions |  [ ] |  [ ] |  aula 3 | APRESENTAR ESTE CAPÍTULO NO GRUPO DE ESTUDOS |
+| 20. Vectors |  [ ] |  [ ] |  |  |
+| 21. Iteration |  [ ] |  [ ] |  |  |
+| **22. Model: introduction** |  [ ] |   Não tem|  |  |
+| 23. Model basics |  [ ] |  [ ] |  |  |
+| 24. Model building |  [ ] |  [ ] |  |  |
+| 25. Many models |  [ ] |  [ ] |  |  |
+| **26. Communicate: introduction** |  [ ] |   Não tem |  |  |
+| 27. R Markdown |  [ ] |  [ ] |  aula 2 |
+| 28. Graphics for communication |  [ ] |  [ ] |  |  |
+| 29. R Markdown formats |  [ ] |  [ ] |  |  |
+| 30. R Markdown workflow |  [ ] |  [ ] |  |  |
 
 
